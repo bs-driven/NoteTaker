@@ -1,17 +1,37 @@
 const express = require('express');
 const path = require('path');
-// const api = requre
+const noteData = require('./db/notes.json')
 
 const app = express();
-const PORT = 3007;
+const PORT = process.env.port || 3007;
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-  res.send(
-    'Use the API endpoint at <a href="http://localhost:3007/">localhost:3007/api</a>'
-  );
+app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, '/public/notes.html')));
+
+app.get('/api/notes', (req, res) => res.json(noteData));
+
+app.get('/api/notes', (req, res) => {
+  // Inform the client
+  res.json(`${req.method} request received to get notes`);
+  // Log our request to the terminal
+  console.info(`${req.method} request received to get notes`);
+  return res.json(notes);
+});
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, '/public/index.html')));
+
+app.post('/api/notes', (req, res) => {
+  res.json(`${req.method} request recevied`);
+  // console.info(req.rawHeaders)
+  console.info(`${req.method} request received`)
+
 });
 
-// app.get('/api', (req, res) => res.json());
 
-app.listen(3007, () => console.log('Express Server on port 3007!'));
+
+app.listen(PORT, () =>
+  console.log(`Express server listening on port ${PORT}!`)
+);
