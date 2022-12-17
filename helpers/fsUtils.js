@@ -31,7 +31,7 @@ const readAndAppend = (content, file) => {
   });
 };
 
-// a function to read and delet a note by the id of the note
+// a function to read and delete a note by the id of the note
 const readAndDelete = (content, file) => {
   fs.readFile(file, 'utf8', (err, data) => {
     if (err) {
