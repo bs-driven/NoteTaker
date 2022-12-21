@@ -1,14 +1,24 @@
 {
-  "name": "note-taker",
+  "name": "notetaker_heroku",
   "version": "1.0.0",
-  "description": "",
+  "description": "The motivation in this project is to was to write in the backend code for Get and Post request addtional I added in the Delete request. You will be able to create a note and also delete note. You will be able to create a note by typing in a title and text then clinking the save button in the top right corner.\r ## Problems\r To begin with this code did not have it back end code written so I was tasked with creating a api for the notes. The page would start then on clicking get started the page would error out. For me there were a few things different things I was having a bit of diffculty with. I had trouble with the readAndDelete function add using it correctly with Delete Path.Sepreating the code in order for it be a bit more dry as well.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bs-driven/NoteTaker.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bs-driven/NoteTaker/issues"
+  },
+  "homepage": "https://github.com/bs-driven/NoteTaker#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.18.2"
   }
 }
