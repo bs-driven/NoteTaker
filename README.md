@@ -7,3 +7,6 @@ To begin with this code did not have it back end code written so I was tasked wi
 
 ## What I Learned
 In this project I grasp a better understanding how to use Express and the methods associated with it. Creating GET routes, POST routes, DEELTE routes as well. In my free time i intend to adjust it so the GET request can gather a certin note. Creating my own api is something I also intend to dive into. Being able to use Express routing was a focus of this project. Creating the backend I find very intresting and I'm glad i was able to create a personal api and server then use them to rend the front end of the code. I want to try building the back end first in different project that I'll be working on in my spare time.
+
+## video Link
+Here is video link to see it working properly https://watch.screencastify.com/v/ZHFRoLZXxUt4eqRa72Qj
